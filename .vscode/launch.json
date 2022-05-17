@@ -1,0 +1,39 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Attach to node process",
+      "type": "node",
+      "request": "attach",
+      "processId": "${command:PickProcess}"
+    },
+    {
+      "name": "Launch Backend",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/out/index.js",
+      "sourceMaps": true,
+      "internalConsoleOptions": "openOnSessionStart",
+      "outputCapture": "std"
+    },
+    {
+      "name": "Launch Frontend",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3099",
+      "webRoot": "${workspaceRoot}"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Launch Backend & Frontend",
+      "configurations": [
+        "Launch Backend",
+        "Launch Frontend"
+      ],
+      "stopAll": true
+    }
+  ]
+}
