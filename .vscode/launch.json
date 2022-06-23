@@ -20,7 +20,7 @@
     },
     {
       "name": "Launch Frontend",
-      "type": "chrome",
+      "type": "pwa-chrome",
       "request": "launch",
       "url": "http://localhost:3099",
       "webRoot": "${workspaceRoot}"
